@@ -1,0 +1,4 @@
+{
+  "watch": ["dist"],
+  "ignore": [".git", "node_modules"]
+}

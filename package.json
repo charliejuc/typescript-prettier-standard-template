@@ -1,0 +1,56 @@
+{
+  "name": "application",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ""
+  },
+  "_moduleAliases": {
+    "@": "./dist/src"
+  },
+  "scripts": {
+    "build": "npm-run-all clean tsc",
+    "dev": "npm-run-all build --parallel nodemon tsc:watch",
+    "lint": "npm-run-all format eslint",
+    "eslint": "eslint --fix --ext .js,.ts ./src",
+    "jest": "jest",
+    "jest:run": "jest --testPathIgnorePatterns dist/",
+    "jest:watch": "jest tests --testPathIgnorePatterns dist/ --watch",
+    "test": "npm-run-all lint --parallel jest:run",
+    "test:watch": "npm-run-all lint jest:watch",
+    "clean": "rimraf dist",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "format": "prettier --write --no-semi .",
+    "nodemon": "nodemon dist/src/apps/server.js --watch",
+    "start": "node dist/src/apps/server.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2",
+    "eslint": "6",
+    "eslint-config-standard-with-typescript": "^16.0.0",
+    "eslint-plugin-import": "2",
+    "eslint-plugin-node": "11",
+    "eslint-plugin-promise": "4",
+    "eslint-plugin-standard": "4",
+    "prettier": "^2.0.5",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.7.7",
+    "babel-jest": "^25.5.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "jest": "^25.5.3",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "~3.8.3"
+  }
+}
