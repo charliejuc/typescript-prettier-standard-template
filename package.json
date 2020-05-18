@@ -17,8 +17,8 @@
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
     "format": "prettier --write --no-semi .",
-    "nodemon": "nodemon dist/src/apps/server.js --watch",
-    "start": "node dist/src/apps/server.js"
+    "nodemon": "nodemon --watch",
+    "start": "node dist/index.ts
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "2",
