@@ -14,14 +14,14 @@ Available commands(package.json):
 ```JSON
 "scripts": {
     "build": "npm-run-all clean tsc",
-    "dev": "npm-run-all build --parallel tsc:watch nodemon",
-    "lint": "prettier-standard --lint",
-    "test": "npm-run-all lint",
+    "dev": "npm-run-all build --parallel nodemon tsc:watch",
+    "lint": "npm-run-all format eslint",
+    "eslint": "eslint --fix --ext .js,.ts ./src",
+    "clean": "rimraf dist",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
-    "clean": "rimraf dist",
-    "format": "prettier-standard --format",
-    "nodemon": "nodemon --watch dist",
+    "format": "prettier --write --no-semi .",
+    "nodemon": "nodemon --watch",
     "start": "node dist/index.js"
 }
 ```
