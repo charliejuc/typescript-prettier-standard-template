@@ -1,7 +1,7 @@
 # Typescript prettier-standard template
 A simple template to initiate writing typescript code with linter and basic build commands.
 
-Dependecies Installation:
+Dependencies Installation:
 ```bash
 yarn install
 
