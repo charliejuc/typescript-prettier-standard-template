@@ -4,6 +4,7 @@
         "project": "./tsconfig.json"
     },
     "rules": {
+        "@typescript-eslint/indent": ["off"],
         "prettier/prettier": "off",
         "space-before-function-paren": "off",
         "@typescript-eslint/space-before-function-paren": ["off"]
