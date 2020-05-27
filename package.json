@@ -8,9 +8,6 @@
     "engines": {
         "node": ""
     },
-    "_moduleAliases": {
-        "@": "./dist/"
-    },
     "scripts": {
         "build": "npm-run-all clean tsc",
         "dev": "npm-run-all build --parallel nodemon tsc:watch",
