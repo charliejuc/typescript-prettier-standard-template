@@ -1,4 +1,4 @@
 {
-  "watch": ["dist"],
-  "ignore": [".git", "node_modules"]
+    "watch": ["dist"],
+    "ignore": [".git", "node_modules"]
 }
